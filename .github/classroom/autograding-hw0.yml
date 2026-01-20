@@ -1,0 +1,11 @@
+name: Autograding - Homework 0
+on: [push]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:  
+      - uses: actions/checkout@v3    
+
+      - name: Homework 0 Tests
+        run: python ${{ github.workspace }}/test_chapter00.py
